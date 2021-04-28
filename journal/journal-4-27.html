@@ -10,15 +10,69 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="assetts/css/style.css">
+    <link rel="stylesheet" href="../assetts/css/style.css">
 </head>
 
 <body>
-    <div class="nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Week-1
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">4-14-2021</a></li>
+                  <li><a class="dropdown-item" href="#">4-15-2021</a></li>
+                  <li><a class="dropdown-item" href="#">4-16-2021</a></li>
+                  <li><a class="dropdown-item" href="#">4-17-2021</a></li>
+                  <li><a class="dropdown-item" href="#">4-18-2021</a></li>
+                  <li><a class="dropdown-item" href="#">4-19-2021</a></li>
+                  <li><a class="dropdown-item" href="#">4-20-2021</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
 
-    </div>
 
-    <div class="jumbotron-heading">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Week-2
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">4-21-2021</a></li>
+                    <li><a class="dropdown-item" href="#">4-22-2021</a></li>
+                    <li><a class="dropdown-item" href="#">4-23-2021</a></li>
+                    <li><a class="dropdown-item" href="#">4-24-2021</a></li>
+                    <li><a class="dropdown-item" href="#">4-25-2021</a></li>
+                    <li><a class="dropdown-item" href="#">4-26-2021</a></li>
+                    <li><a class="dropdown-item" href="#">4-27-2021</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <div class="text-center jumbotron-heading">
         <img src="" alt="" srcset="">
 
         <h3>About Me</h3>
@@ -30,7 +84,7 @@
 
     <div class="main-ideas">
         <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm-6">
                 <col-sm-2>
                     <ol>
                         <li>Create Dashboard</li>
@@ -40,7 +94,7 @@
                 </col-sm-2>
             </div>
             
-            <div class="col-sm-2">
+            <div class="col-sm-6">
                     <ol>
                         <li>Cloudcraft</li>
                         <li>Craigslist Table</li>
@@ -49,16 +103,7 @@
                     </ol>
             </div>
 
-            <div class="col-sm-2">
-                <ol>
-                    <li>Where I really work</li>
-                    <li>Body Pillow</li>
-                    <li>Extra pillow</li>
-                    <li>Labtop</li>
-                    <li>Robe/Blanket</li>
-                    <li>Dog</li>
-                </ol>
-        </div>
+
 
 
         </div>
@@ -68,17 +113,17 @@
         <div class="row">
             <div class="col-sm-4">
                 <img src="" alt="" srcset="">
-                <h4>image here</h4>
+                <h4>Setup</h4>
             </div>
 
             <div class="col-sm-8">
-                <h4>Our project has grown in magnitude; while this has led to questions on our implementation, that is for another discussion.  Currently it has been agreed to better test usage on our.  While I have done my initial testing.  Having a dedicated QA team has its perks and we want to make the best possible use of our talented team in QA.  We established 3 stacks.  qa1, qa2, qa3.  </h4>
+                <p>Our project has grown in magnitude; while this has led to questions on our implementation, that is for another discussion.  Currently it has been agreed to better test usage on our.  While I have done my initial testing.  Having a dedicated QA team has its perks and we want to make the best possible use of our talented team in QA.  We established 3 stacks.  qa1, qa2, qa3.  </p>
 
                 <ol>
                     <li>qa1 - t2.2xlarge -> Control -> Used by QA Manager</li>
                     <li>qa2 - t2.medium -> Scaling test 2-4 Servers -> Used by QA</li>
                     <li>qa3 - t2.2xlarge -> Variable -> Used by QA Team</li>
-                    <li></li>
+                   
                 </ol>
 
                 <p>To help deal with issueses presented by QA during load-testing.  I created a Cloudwatch Dashboard with metrics from each stack.  Crucial ones here being disk usage and ram as we have run out of space multiple times as well as crashed countless times.  The dashboard has improved our response time to issues as well as helped us verify our suspicions.  </p>
@@ -129,7 +174,7 @@
     </div>
 
 
-    <div class="footer">
+    <!-- <div class="footer">
         <div class="row">
             <div class="col-sm-4">
                 <ol>
@@ -141,7 +186,7 @@
             </div>
             <div class="col-sm-4"></div>
             <div class="col-sm-4"></div>
-        </div>
+        </div> -->
         <!-- API for Cyber Security Quote -->
     </div>
 
