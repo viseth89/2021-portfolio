@@ -65,6 +65,26 @@
                   <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                         </ul>
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Week-3
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="journal-4-28.html">4-28-2021</a></li>
+                            <li><a class="dropdown-item" href="journal-4-29.html">4-29-2021</a></li>
+                            <li><a class="dropdown-item" href="journal-4-30.html">4-30-2021</a></li>
+                            <li><a class="dropdown-item" href="journal-5-1.html">5-1-2021</a></li>
+                            <li><a class="dropdown-item" href="journal-5-2.html">5-2-2021</a></li>
+                            <li><a class="dropdown-item" href="journal-5-3.html">5-3-2021</a></li>
+                            <li><a class="dropdown-item" href="journal-5-4.html">5-4-2021</a></li>
+                            <!-- <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                    </li>
+
+                    
                 </ul>
                 <!-- <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -76,20 +96,34 @@
 
     <div class="text-center jumbotron-heading">
         <img src="" alt="" srcset="">
-        <h3>4/22/2021</h3>
-        <h4>Scaling</h4>
+        <h3>Scaling and Stacks</h3>
+        <h4>Wednesday</h4>
+        <h5>4/29/2021</h5>
 
     </div>
+
 
     <div class="section-1">
         <div class="row">
             <div class="col-sm-4">
                 <img src="" alt="" srcset="">
-                <h4>Golden AMI</h4>
+                <h4>Dashboard Revisions: </h4>
             </div>
 
             <div class="col-sm-8">
-                <h4>In order to release our AMI to the public; we must first create a 'Golden AMI'.  Our first attempt allowed us the chance to review Amazon's Marketplace Seller Guide.  With this information we prepared Jira cards to account for their requirements.  </h4>
+                <p>When Creating the Dashboard the cron job that sends memory and disk-usage along with cpu-usage are the three metrics I rely on the most.  What I've also noticed is that when instances scale in.  Their metrics are not visible on cloudwatch right away.  I've witnessed multiple instances scale in but no metrics.  Even when I run the command manually and it says 'Cloudwatch Metrics successfully sent' still no metrics.  Today while attempting to update the metrics just would not appear until almost 5 hours later... But why??  This anomoly happened on qa2 during periods of frequent scale in and out.  What would be the rationale, how often does this happen.  What is the time when metrics are readily available.  Is it possible to make a dynamic dashboard?  I would imagine not as the metrics for the instances are under linux as opposed to scaling group (ram and disk usage).  </p>
+
+                <ol>
+                    <li>qa1 - t2.2xlarge -> Control -> Used by QA Manager</li>
+                    <li>qa2 - t2.medium -> Scaling test 2-4 Servers -> Used by QA</li>
+                    <li>qa3 - t2.2xlarge -> Variable -> Used by QA Team</li>
+
+                </ol>
+
+                <p>To help deal with issueses presented by QA during load-testing. I created a Cloudwatch Dashboard with
+                    metrics from each stack. Crucial ones here being disk usage and ram as we have run out of space
+                    multiple times as well as crashed countless times. The dashboard has improved our response time to
+                    issues as well as helped us verify our suspicions. </p>
             </div>
         </div>
     </div>
@@ -98,11 +132,25 @@
         <div class="row">
             <div class="col-sm-4">
                 <img src="" alt="" srcset="">
-                <h4>Preliminary Scan</h4>
+                <h4>Ways to improve our Load Testing</h4>
             </div>
 
             <div class="col-sm-8">
                 <h4>Using Linux to Measure Load</h4>
+
+                <p>QA has contacted me multiple times regarding the server failure. Upon glancing the dashboard I can
+                    quickly deduce what is causing the issue; Rarely have we run out of ram (32 gigs). CPU can spike
+                    past 50% and will begin to error if it is maintained past 90% in my assessment (no real suprise).
+                    While the cpu metrics are crucial; the star metric in this paragraph is disk space. We've been able
+                    to verify disk usage spikes with certain locust test. When the server reaches 100%, its not
+                    suprising we are getting failures. 1. Need to create alarm/sns; 2. Cron job; 3. Shared Storage
+                    EFS/s3, I believe we store the temp file on the server as well as the processed before sending it to
+                    s3. While I have commented on this; universal buy-in of the unfamiliar has been challenging to say
+                    the least. While this problem also presents an opportunity to improve; For now a simple cron job
+                    shall suffice to alleviate the immediate concern.
+                </p>
+
+                <p>code here</p>
             </div>
         </div>
     </div>
@@ -111,11 +159,19 @@
         <div class="row">
             <div class="col-sm-4">
                 <img src="" alt="" srcset="">
-                <h4>Subission</h4>
+                <h4>Differences</h4>
             </div>
 
             <div class="col-sm-8">
-                <p>This will be our second submission.  While some parts are still a bit vague; having gone through the process and communicating with other departments has certainly helped our process.  Working with sales to establish prices, working with marketing to establish how we will market our product as well as assisting in developing content</p>
+                <h4>Using Linux to Measure Load</h4>
+
+                <p>Scaling. I believe scaling is a topic that I continue to learn more and more about. How does scaling
+                    physically differ from nginx scaling multiple node applications vs multiple docker containers. It is
+                    my assumption that phsical scaling has one undeniable benefit. More cores and more ram. With nginx
+                    and docker if we are using the same instance we're effectively splitting resources; I can't imagine
+                    this any different from virtualbox where we run ubuntu or kali linux and dedicate resources/ram.
+                    This is our max or bottleneck at times. As we will never be able to exceed this level of
+                    performance. </p>
             </div>
         </div>
     </div>
@@ -133,9 +189,9 @@
                         <div class="col-sm-5">
                             <col-sm-2>
                                 <ol>
-                                    <li>Golden AMI</li>
-                                    <li>Preliminary Scan</li>
-                                    <li>Submission</li>
+                                    <li>Create Dashboard</li>
+                                    <li>Create Cron Job</li>
+                                    <li>Teach</li>
                                 </ol>
                             </col-sm-2>
                         </div>
@@ -155,25 +211,20 @@
     </div>
 
 
-    <div class="footer">
+    <!-- <div class="footer">
         <div class="row">
             <div class="col-sm-4">
                 <ol>
-                    <!-- api -->
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </ol>
             </div>
-            <div class="col-sm-4">
-                <ol>
-                    <!-- api -->
-                </ol>
-            </div>
-            <div class="col-sm-4">
-                <ol>
-                    <!-- api -->
-                </ol>
-            </div>
-        </div>
-        <!-- API for Cyber Security Quote -->
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+        </div> -->
+    <!-- API for Cyber Security Quote -->
     </div>
 
 

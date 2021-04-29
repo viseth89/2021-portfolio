@@ -19,4 +19,5 @@
  - s3 api usage;
  - cdn usage;
  - csv usage - chart?
- 
+ - Previous Blog Used Flask and SQL-lite, Portfolio used Django with sql-lite -> Will migrate entries to mysql hosted on aws
+ - combine journal entries with personal site
