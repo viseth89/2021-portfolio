@@ -8,7 +8,7 @@ body {
     max-width: 1100px;
     /* padding: 0px 30px 30px 30px;  */
     margin:auto;
-    background-color: EBEBF0;
+    background-color: #EBEBF0;
 }
 
 h1 {
@@ -17,13 +17,19 @@ h1 {
     color:black;
     font-weight:300;
 }
+
+h4 {
+    margin-top:20px;
+    margin-bottom:20px;
+    font-weight:200;
+}
 .row {
         padding: 0px 30px 30px 30px; 
 
 }
 
 i {
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .carousel {
@@ -42,7 +48,7 @@ i {
 
 footer {
     position: fixed;
-    height: 100px;
+    height: 75px;
     bottom: 0;
     width: 100%;
 }
