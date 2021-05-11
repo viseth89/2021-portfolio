@@ -30,7 +30,9 @@ h4 {
 
 i {
     font-size: 50px;
+    /* color: #447011 !important; */
 }
+
 
 .carousel {
     color:black;
@@ -47,7 +49,7 @@ i {
 }
 
 footer {
-    position: fixed;
+
     height: 75px;
     bottom: 0;
     width: 100%;
