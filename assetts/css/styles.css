@@ -11,9 +11,19 @@ body {
     background-color: EBEBF0;
 }
 
+h1 {
+    font-family: "Oxygen", sans-serif;
+    font-size:30px;
+    color:black;
+    font-weight:300;
+}
 .row {
         padding: 0px 30px 30px 30px; 
 
+}
+
+i {
+    font-size: 60px;
 }
 
 .carousel {
@@ -36,7 +46,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
+/* 
 carousel-item.active img {
     height:200px !important;
-}
+} */
+
