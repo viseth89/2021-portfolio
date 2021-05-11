@@ -54,6 +54,13 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.card-cover {
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: cover;
+}
+
 /* 
 carousel-item.active img {
     height:200px !important;
