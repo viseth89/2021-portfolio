@@ -61,6 +61,9 @@ footer {
     background-size: cover;
 }
 
+a {
+    color:steelblue;
+}
 /* 
 carousel-item.active img {
     height:200px !important;
